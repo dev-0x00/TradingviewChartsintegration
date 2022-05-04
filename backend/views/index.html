@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: black;
+        }
+        #tvchart{
+            position: absolute;
+            width: 50vw;
+            height: 80vh;
+            margin-left: 5%;
+            margin-top: 4%;
+        }
+        #panel{
+            float: left;
+            width: 19vw;
+            height: 73vh;
+            border-style: solid;
+            border-color: cyan;
+            border-radius: 15px;
+            margin-left:  150px;
+            margin-top: 5%;
+            margin-right: 3%;
+            margin-bottom: 3%;
+        }
+        #form{
+            margin-top: 5%;
+            margin-left: 2%;
+        }
+
+        label{
+            color: cyan;
+            margin-left: 2%;
+            font-size: 0.9rem;
+        }
+        #time{
+            color: red;
+            background-color: black;
+            outline: none;
+            margin-left: 5%;
+            border-color: cyan;
+            border-style: solid;
+            border-radius: 5px;
+            height: 1.5rem;
+            width: 11rem;
+            
+        }
+        select{
+            margin-left: 12.5%;
+            border-color: cyan;
+            border-style: solid;
+            border-radius: 5px;
+            margin-bottom: 5%;
+            width: 11.5rem;
+            height: 1.65rem;
+            color: red;
+            background-color: black;
+        }
+        #submit{
+            margin-left : 65%;
+            border-color: cyan;
+            border-style: solid;
+            border-radius: 5px;
+            height: 2rem;
+            width: 4rem;
+            color: red;
+            background-color: black;
+        }
+        #time{
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+        #checkbox{
+            margin-top: 95%;
+            margin-left: 5%;
+        }
+        #SMA5{
+            filter: hue-rotate(150deg);
+        }
+        #RSI{
+            filter: hue-rotate(150deg);
+        }
+        #MACDFAST{
+            filter: hue-rotate(150deg);
+        }
+        #MACDSLOW{
+            filter: hue-rotate(150deg);
+        }
+        #MACDHIST   {
+            background-color: black;
+            filter: hue-rotate(150deg);
+        }
+        #chartHolder{
+            height: 100%;
+            border-style: solid;
+            border-color: cyan;
+            border-radius: 10px;
+            width: 56vw;
+            height: 90vh;
+            position: absolute;
+            float: right;
+            margin-left: 35%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+        #link{
+            color: black;
+            text-decoration: none;
+           
+        }
+        #link1{
+            size: 2rem;
+            font-size: 1.2rem;
+            height: 2rem;
+            margin-top: 0%;
+            margin-left: 14%;
+            text-decoration: none;
+        }
+        #header{
+            color: blue;
+            size: 0;
+            margin-top: 0%;
+            margin-left: 15%;
+        }
+        h1{
+            size: 0.9rem;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingView Indicator</title>
+</head>
+<body>
+    <div id="link1">
+        <a id="link" href="${url}"  value="http://localhost"><%= url %></a>
+    </div>
+    <div id="chartHolder">
+        <div id="tvchart">
+
+        </div>
+    </div>
+    <h3 id="header"><%= symbol %><h3>
+    <div id="panel">
+        <div id="form">
+            <form action="/" method="post" id="form" enctype="application/json">
+                <label id=lable for="currency">Currecy:</label>
+                <select name="symbol" id="symbol">
+                    <option id=currency value="BTCUSDT">BTCUSDT</option><br>
+                    <option id=currency value="ETHUSDT">ETHUSDT</option><br>
+                    <option id=currency value="NEARUSDT">NEARUSDT</option><br>
+                    <option id=currency value="ALGOUSDT">ALGOUSDT</option><br>
+                    <option id=currency value="SOLUSDT">SOLUSDT</option><br>
+                    <option id=currency value="AVAXUSDT">AVAXUSDT</option><br>
+                    <option id=currency value="FTMUSDT">FTMUSDT</option><br>
+                    <option id=currency value="XRPUSDT">XRPUSDT</option><br>
+                  </select>
+                <label for="time">Time Frame:</label>
+                <input type="text" id="time" name="time" placeholder="1d"><br><br>
+                <input id=submit type="submit" value="Send">
+              </form>
+        </div>
+        <div id="checkbox">
+            <form action="/action_page.php">
+                <input type="checkbox" id="SMA5" name="SMA5" value="Bike">
+                <label for="SMA5"> SMA5</label><br>
+                <input type="checkbox" id="RSI" name="RSI" value="Car">
+                <label for="RSI"> RSI</label><br>
+                <input type="checkbox" id="MACDFAST" name="MACDFAST" value="Boat">
+                <label for="MACDFAST"> Macd Fast</label><br>
+                <input type="checkbox" id="MACDSLOW" name="MACDSLOW" value="Boat">
+                <label for="MACDSLOW"> Macd Slow</label><br>
+                <input type="checkbox" id="MACDHIST" name="MACDHIST" value="Boat">
+                <label for="MACDHIST"> Macd Histogram</label><br>
+              </form>
+        </div>
+        <div>
+
+</body>
+<script src="/static/"></script>
+<script src="/index/"></script>
+</html>
