@@ -7,7 +7,7 @@ then start node js server.
 
 ```
 dev@kali$ git clone https:www.github.com/TradingviewChartsintegration.git
-dev@kali$ python3 main.py 
+dev@kali$ npm run watch
 
 ```
 social links
