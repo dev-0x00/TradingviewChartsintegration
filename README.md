@@ -18,3 +18,5 @@ you can follow me on social media
 - on twitter  : [@sidney_sanday](https://twitter.com/sidney_sanday)
 - on upwork   : [juma sunday](https://www.upwork.com/freelancers/~015846a45d54d7f75d)
 - on linkedin : [@dev null](https://www.linkedin.com/in/juma-sunday-6b57671ba/)
+
+you can watch how th video operates on youtube.
